@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Parak5"
 include ':app'
+include ':knowledgecheck'
+include ':mycalendar'

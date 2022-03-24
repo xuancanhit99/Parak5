@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        app:layout_constraintGuide_begin="100dp"-->
+    <!--        android:orientation="vertical"/>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        android:text="Button1"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guideline"-->
+
+    <!--        -->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="BUTTON2"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guideline"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/button" />-->
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="250dp" />
+
+    <ImageView
+        android:id="@+id/mood"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/cheeful"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/ratingBarColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textColor="@color/ratingBarColor"
+        app:layout_constraintBottom_toTopOf="@+id/mood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <TextView
+        android:id="@+id/tevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/tdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/event_data"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/vdata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttime" />
+
+    <TextView
+        android:id="@+id/ttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event_time"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/vtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vevent" />
+
+    <EditText
+        android:id="@+id/vevent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tevent" />
+
+    <EditText
+        android:id="@+id/vdata"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/vtime" />
+
+    <EditText
+        android:id="@+id/vtime"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:inputType="time"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/vevent" />
+
+    <EditText
+        android:id="@+id/post"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/ps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/mood">
+
+        <RadioButton
+            android:id="@+id/good"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/good" />
+
+        <RadioButton
+            android:id="@+id/bad"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:checked="false"
+            android:layout_height="wrap_content"
+            android:text="@string/bad" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="8sp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
